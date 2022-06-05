@@ -65,6 +65,6 @@ public class DemoReactorApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         Maths app = new Maths();
-        app.average();
+        app.summarizing();
     }
 }
