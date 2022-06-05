@@ -1,5 +1,7 @@
 package com.sofkau.demoreactor.model;
 
+import java.util.Objects;
+
 public class Person {
 
     private Integer idPersona;
@@ -43,5 +45,18 @@ public class Person {
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Person)) return false;
+        Person person = (Person) o;
+        return idPersona.equals(person.idPersona);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(idPersona);
     }
 }

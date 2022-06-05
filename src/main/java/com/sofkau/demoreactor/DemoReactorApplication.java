@@ -1,7 +1,8 @@
 package com.sofkau.demoreactor;
 
 import com.sofkau.demoreactor.model.Person;
-import com.sofkau.demoreactor.operador.Creacion;
+import com.sofkau.demoreactor.operador.Condicional;
+import com.sofkau.demoreactor.operador.Maths;
 import io.reactivex.Observable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,8 +11,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import com.sofkau.demoreactor.operador.ErrorOp;
 
-import java.io.Flushable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -63,7 +64,7 @@ public class DemoReactorApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Creacion app = new Creacion();
-        app.repeat();
+        Maths app = new Maths();
+        app.average();
     }
 }
